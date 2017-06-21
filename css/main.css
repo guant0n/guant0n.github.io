@@ -1,0 +1,90 @@
+html, body {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+#logo {
+  margin-left: 20px;
+  margin-top: 20px;
+  height: 80px;
+  width: auto;
+  -webkit-filter: invert(80%); /* Safari */
+  filter: invert(80%);
+}
+
+nav {
+  height: 120px;
+}
+
+nav ul {
+  margin-top: 28px;
+}
+
+nav ul a {
+  font-family: 'Dosis', sans-serif;
+}
+
+.navbar-fixed {
+  height: 120px;
+}
+
+.jumbotron {
+  height: 600px;
+  background:
+    /* top, transparent black, faked with gradient */
+    linear-gradient(
+      rgba(55, 71, 79, 0.8),
+      rgba(69, 90, 100, 0.8)
+    ),
+    /* bottom, image */
+    url(../assets/background.jpg) center / cover;
+}
+
+.jumbotron table {
+  margin: auto;
+  width: 800px;
+  white-space: nowrap;
+}
+
+.jumbotron h1 {
+  font-family: 'Dosis', sans-serif;
+  font-size: 6rem;
+  color: #eceff1;
+  margin-right: 40px;
+}
+
+.jumbotron h4 {
+  color: #b0bec5;
+}
+
+.jumboFirst {
+  animation-delay: 0.5s;
+}
+
+.jumboSecond {
+  animation-delay: 1.25s;
+}
+
+.jumboThird {
+  animation-delay: 1.75s;
+}
+
+.jumboFourth {
+  animation-delay: 2.25s;
+}
+
+.section {
+  height: 600px;
+  background-color: #546e7a;
+}
+
+.section h1 {
+  font-family: 'Dosis', sans-serif;
+  font-size: 6rem;
+  color: #eceff1;
+}
+
+.skills img {
+  height: 100px;
+  width: auto;
+}
