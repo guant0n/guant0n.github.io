@@ -12,13 +12,33 @@ $( document ).ready(function(){
 
   //configure scrollfire for page sections
   var options = [
-      {selector: '.about-me', offset: 200, callback: function(el) {
+      {selector: '.about-section', offset: 300, callback: function(el) {
         $('.about-me').css('visibility', 'visible');
         $('.about-me').addClass('animated fadeInUp');
-      } }
+      }},
+      {selector: '.about-section', offset: 900, callback: function(el) {
+        $('#aHome').removeClass('active');
+        $('#aAbout').addClass('active');
+        $('#aContact').removeClass('active');
+      }},
+      {selector: '.contact-section', offset: 900, callback: function(el) {
+        $('#aHome').removeClass('active');
+        $('#aAbout').removeClass('active');
+        $('#aContact').addClass('active');
+      }}
     ];
     Materialize.scrollFire(options);
 
+  $(window).on('wheel', function(e) {
+
+  	var delta = e.originalEvent.deltaY;
+
+  	if (delta < 0) {
+      $('#aHome').removeClass('active');
+      $('#aAbout').removeClass('active');
+      $('#aContact').removeClass('active');
+    }
+  });
 
   //smooth scroll
   // Select all links with hashes
