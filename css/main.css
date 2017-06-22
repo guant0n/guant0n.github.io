@@ -1,3 +1,9 @@
+@media only screen and (max-width: 992px) {
+  nav .brand-logo {
+  left: 0%;
+  }
+}
+
 html, body {
   margin: 0;
   font-family: 'Raleway', sans-serif;
@@ -18,10 +24,16 @@ nav {
 
 nav ul {
   margin-top: 28px;
+  margin-right: 20px;
 }
 
 nav ul a {
-  font-family: 'Dosis', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.0rem;
+}
+
+nav .button-collapse {
+  float: right;
 }
 
 .navbar-fixed {
@@ -29,15 +41,19 @@ nav ul a {
 }
 
 .jumbotron {
-  height: 600px;
+  height: 680px;
   background:
     /* top, transparent black, faked with gradient */
     linear-gradient(
-      rgba(55, 71, 79, 0.8),
-      rgba(69, 90, 100, 0.8)
+      rgba(69, 90, 100, 0.8),
+      rgba(55, 71, 79, 0.8)
     ),
     /* bottom, image */
     url(../assets/background.jpg) center / cover;
+}
+
+.jumbotron .container {
+  margin-top: 60px;
 }
 
 .jumbotron table {
@@ -54,7 +70,7 @@ nav ul a {
 }
 
 .jumbotron h4 {
-  color: #b0bec5;
+  color: #cfd8dc;
 }
 
 .jumboFirst {
@@ -73,18 +89,27 @@ nav ul a {
   animation-delay: 2.25s;
 }
 
-.section {
+.about-section {
   height: 600px;
-  background-color: #546e7a;
+  background-color: #263238;
 }
 
-.section h1 {
-  font-family: 'Dosis', sans-serif;
-  font-size: 6rem;
-  color: #eceff1;
+.about-me {
+  display: flex;
+  visibility: hidden;
 }
 
-.skills img {
-  height: 100px;
-  width: auto;
+#prof-pic {
+  flex: 1 1 50%;
+  text-align: center;
+}
+
+#bio {
+  flex: 1 1 50%;
+  color: #cfd8dc;
+}
+
+.skills-section {
+  height: 600px;
+  background-color: #37474f;
 }
