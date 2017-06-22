@@ -22,7 +22,7 @@ $( document ).ready(function(){
 
   //smooth scroll
   // Select all links with hashes
-$('a[href*="#"]')
+  $('a[href*="#"]')
   // Remove links that don't actually link to anything
   .not('[href="#"]')
   .not('[href="#0"]')
@@ -42,7 +42,7 @@ $('a[href*="#"]')
         event.preventDefault();
         $('html, body').animate({
           scrollTop: target.offset().top
-        }, 1000, function() {
+        }, 800, function() {
           // Callback after animation
           // Must change focus!
           var $target = $(target);
@@ -56,5 +56,23 @@ $('a[href*="#"]')
         });
       }
     }
+  });
+
+  $('#aHome').on('click', function() {
+    $('#aHome').addClass('active');
+    $('#aAbout').removeClass('active');
+    $('#aContact').removeClass('active');
+  });
+
+  $('#aAbout').on('click', function() {
+    $('#aHome').removeClass('active');
+    $('#aAbout').addClass('active');
+    $('#aContact').removeClass('active');
+  });
+
+  $('#aContact').on('click', function() {
+    $('#aHome').removeClass('active');
+    $('#aAbout').removeClass('active');
+    $('#aContact').addClass('active');
   });
 });
